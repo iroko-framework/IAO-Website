@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rye&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap');
 
 /* ============================================================
    ILÉ AÑA OLOFÍ — Navy · Gold · Cream
@@ -18,7 +18,7 @@
   --text-muted:  #4A4A6A;
   --white:       #FDFCF7;
 
-  --font-display: 'Rye', 'Poor Richard', Georgia, serif;
+  --font-display: 'Cinzel', Georgia, serif;
   --font-serif:   'EB Garamond', Garamond, Georgia, serif;
   --font-sans:    'Source Sans 3', system-ui, sans-serif;
 }
@@ -299,7 +299,51 @@ footer a:hover { color: var(--gold-light); }
 }
 
 /* ── RESPONSIVE ── */
+
+/* ── Tablet / large mobile (≤ 768px) ─────────────────────────── */
 @media (max-width: 768px) {
+
+  html { font-size: 16px; }
+
+  /* Nav */
   nav ul { display: none; }
+  nav { padding: 0 1.25rem; }
+
+  /* Hero */
+  .hero { padding: 4rem 1.25rem 3rem; }
+  .hero .seal { font-size: 2rem; }
+
+  /* Sections */
+  .section { padding: 2.5rem 1.25rem; }
+  .section.alt .inner,
+  .section.mid .inner { padding: 2.5rem 1.25rem; }
+
+  /* Cards — single column */
+  .cards { grid-template-columns: 1fr; gap: 1rem; }
+
+  /* Footer */
   .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+
+/* ── Small mobile (≤ 480px) ───────────────────────────────────── */
+@media (max-width: 480px) {
+
+  html { font-size: 15px; }
+
+  nav { padding: 0 1rem; height: 56px; }
+  nav .brand .wordmark { font-size: .95rem; }
+
+  /* Hero */
+  .hero { padding: 3rem 1rem 2.5rem; }
+  .hero .seal { font-size: 1.7rem; letter-spacing: 0.02em; }
+  .hero p.lead { font-size: .95rem; }
+  .hero .badges { gap: .5rem; }
+  .hero .badge { font-size: .65rem; }
+
+  /* Buttons — stack */
+  div[style*="display: flex"] .btn { width: 100%; text-align: center; }
+
+  /* Footer */
+  footer { padding: 2.5rem 1rem; }
 }
